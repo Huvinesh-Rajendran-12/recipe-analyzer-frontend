@@ -61,8 +61,8 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/smart-recipe-analyzer-frontend.git
-cd smart-recipe-analyzer-frontend
+git clone https://github.com/Huvinesh-Rajendran-12/recipe-analyzer-frontend.git
+cd recipe-analyzer-frontend
 ```
 
 ### 2. Install Dependencies
