@@ -83,15 +83,6 @@ npm install --legacy-peer-deps
 
 > **Note**: We use `--legacy-peer-deps` due to peer dependency requirements between Vite and Svelte plugins.
 
-### 3. Environment Setup
-
-```bash
-# Copy the example environment file
-cp .env.example .env
-
-# Edit .env and set your API URL (default: http://localhost:8000)
-```
-
 ## ⚙️ Configuration
 
 ### Environment Variables
