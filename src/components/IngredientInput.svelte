@@ -30,7 +30,7 @@
     {disabled}
     on:keydown={handleKeydown}
     class="ingredient-input"
-  />
+  ></textarea>
   
   <label for="dietary-restrictions">
     Dietary restrictions (optional):

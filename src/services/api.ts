@@ -1,24 +1,33 @@
-import type { RecipeResponse, ApiError } from '../types/recipe';
+import type { RecipeResponse, ApiError } from "../types/recipe";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || "";
 
 export class RecipeService {
-  static async generateRecipes(ingredients: string, dietaryRestrictions: string = ''): Promise<RecipeResponse> {
+  static async generateRecipes(
+    ingredients: string,
+    dietaryRestrictions: string = "",
+  ): Promise<RecipeResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/analyze`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        `${API_BASE_URL}/api/analyze`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ingredients: ingredients,
+            dietary_restrictions: dietaryRestrictions,
+          }),
         },
-        body: JSON.stringify({
-          ingredients: ingredients,
-          dietary_restrictions: dietaryRestrictions
-        }),
-      });
+      );
 
       if (!response.ok) {
         const error = await response.json();
-        throw new Error(error.message || `HTTP error! status: ${response.status}`);
+        throw new Error(
+          error.message ||
+            `HTTP error! status: ${response.status}`,
+        );
       }
 
       const data = await response.json();
@@ -29,12 +38,12 @@ export class RecipeService {
       if (error instanceof Error) {
         throw {
           message: error.message,
-          code: 'NETWORK_ERROR'
+          code: "NETWORK_ERROR",
         } as ApiError;
       }
       throw {
-        message: 'An unexpected error occurred',
-        code: 'UNKNOWN_ERROR'
+        message: "An unexpected error occurred",
+        code: "UNKNOWN_ERROR",
       } as ApiError;
     }
   }
