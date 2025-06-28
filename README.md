@@ -42,6 +42,16 @@ A modern, responsive web application that transforms your available ingredients 
 
 ## 🚀 Demo
 
+### Video Demonstrations
+
+#### Agentic Recipe Generator Demo
+[![Agentic Recipe Generator Demo](https://img.youtube.com/vi/x2uaiB7PVgU/maxresdefault.jpg)](https://youtu.be/x2uaiB7PVgU)
+
+#### Standard Recipe Generator Demo
+[![Standard Recipe Generator Demo](https://img.youtube.com/vi/JqYX7BkJHd8/maxresdefault.jpg)](https://youtu.be/JqYX7BkJHd8)
+
+### Application Overview
+
 The application consists of:
 1. **Input Section**: Where users enter ingredients and dietary restrictions
 2. **Loading State**: Animated spinner while recipes are being generated
